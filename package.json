@@ -1,0 +1,36 @@
+{
+  "name": "typescript-starter",
+  "version": "1.0.0",
+  "description": "Basic typescript starter project with eslint + prettier setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "npx nodemon",
+    "start": "npm run build && node build/index.js",
+    "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "build": "rimraf ./build && tsc",
+    "lint": "eslint . --ext .ts"
+  },
+  "keywords": [
+    "typescript",
+    "eslint",
+    "prettier"
+  ],
+  "author": "Dex Decker",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2"
+  }
+}
